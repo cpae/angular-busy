@@ -51,7 +51,7 @@ module.exports = function (grunt) {
     },
     concat: {
       main: {
-        src: ['angular-busy.js', 'temp/templates.js'],
+        src: ['angular-busy.js'/*, 'temp/templates.js'*/],
         dest: 'dist/angular-busy.js'
       }
     },
@@ -80,7 +80,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('serve', ['jshint','connect', 'watch']);
-  grunt.registerTask('build',['ngtemplates','concat','uglify','copy','cssmin']);
+  grunt.registerTask('build',[/*'ngtemplates',*/'concat','uglify','copy','cssmin']);
   grunt.registerTask('test',['build','jasmine']);
 
 };

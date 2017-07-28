@@ -127,7 +127,7 @@ angular.module('cgBusy').directive('cgBusy',['$compile','$templateCache','cgBusy
                 //Apply position:relative to parent element if necessary
                 var position = element.css('position');
                 if (position === 'static' || position === '' || typeof position === 'undefined'){
-                    element.css('position','relative');
+                    element.css('position','static');
                 }
 
                 var templateElement;
@@ -242,35 +242,3 @@ angular.module('cgBusy').directive('cgBusy',['$compile','$templateCache','cgBusy
     }
 ]);
 
-
-angular.module('cgBusy').run(['$templateCache', function($templateCache) {
-  'use strict';
-
-  $templateCache.put('angular-busy.html',
-    "<div class=\"cg-busy-default-wrapper\">\n" +
-    "\n" +
-    "   <div class=\"cg-busy-default-sign\">\n" +
-    "\n" +
-    "      <div class=\"cg-busy-default-spinner\">\n" +
-    "         <div class=\"bar1\"></div>\n" +
-    "         <div class=\"bar2\"></div>\n" +
-    "         <div class=\"bar3\"></div>\n" +
-    "         <div class=\"bar4\"></div>\n" +
-    "         <div class=\"bar5\"></div>\n" +
-    "         <div class=\"bar6\"></div>\n" +
-    "         <div class=\"bar7\"></div>\n" +
-    "         <div class=\"bar8\"></div>\n" +
-    "         <div class=\"bar9\"></div>\n" +
-    "         <div class=\"bar10\"></div>\n" +
-    "         <div class=\"bar11\"></div>\n" +
-    "         <div class=\"bar12\"></div>\n" +
-    "      </div>\n" +
-    "\n" +
-    "      <div class=\"cg-busy-default-text\">{{$message}}</div>\n" +
-    "\n" +
-    "   </div>\n" +
-    "\n" +
-    "</div>"
-  );
-
-}]);
